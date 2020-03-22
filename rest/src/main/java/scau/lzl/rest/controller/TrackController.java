@@ -15,10 +15,10 @@ public class TrackController {
     TrackService trackService;
 
     @PostMapping("/user")
-    public void track(@RequestParam String name,
+    public void track(@RequestParam long uid,
                       @RequestParam String referer,
                       @RequestParam int position) {
 
-        trackService.sendToKafka(name, referer, position);
+        trackService.sendToKafka(uid, referer, position);
     }
 }

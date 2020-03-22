@@ -2,7 +2,8 @@ package scau.lzl.rest.entity;
 
 public class Tracker {
 
-    private String name;
+    private long id;
+    private long uid;
     private long timestamp;
     private String referer;
     private int position;
@@ -10,19 +11,28 @@ public class Tracker {
     public Tracker() {
     }
 
-    public Tracker(String name, long timestamp, String referer, int position) {
-        this.name = name;
+    public Tracker(long id, long uid, long timestamp, String referer, int position) {
+        this.id = id;
+        this.uid = uid;
         this.timestamp = timestamp;
         this.referer = referer;
         this.position = position;
     }
 
-    public String getName() {
-        return name;
+    public long getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getUid() {
+        return uid;
+    }
+
+    public void setUid(long uid) {
+        this.uid = uid;
     }
 
     public long getTimestamp() {
@@ -52,7 +62,8 @@ public class Tracker {
     @Override
     public String toString() {
         return "Tracker{" +
-                "name='" + name + '\'' +
+                "id=" + id +
+                ", uid=" + uid +
                 ", timestamp=" + timestamp +
                 ", referer='" + referer + '\'' +
                 ", position=" + position +

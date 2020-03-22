@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="etl" />
         <module name="rest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="etl" target="1.8" />
       <module name="forever" target="1.8" />
       <module name="rest" target="1.8" />
     </bytecodeTargetLevel>

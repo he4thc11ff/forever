@@ -101,6 +101,13 @@
             <artifactId>kafka-clients</artifactId>
             <version>2.3.1</version>
         </dependency>
+
+        <!-- kudu-client -->
+        <dependency>
+            <groupId>org.apache.kudu</groupId>
+            <artifactId>kudu-client</artifactId>
+            <version>1.11.1</version>
+        </dependency>
     </dependencies>
 
     <build>
