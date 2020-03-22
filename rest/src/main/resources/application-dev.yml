@@ -1,0 +1,37 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 30m
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/forever?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 47.104.206.109
+    port: 6379
+    password:
+  session:
+    store-type: redis
+    redis:
+      namespace: spring:session
+      flush-mode: on_save
+
+mybatis:
+  mapper-locations: classpath*:scau/lizl/forever/mapper/mapping/*Mapper.xml
+  type-aliases-package: scau.lizl.forever.entity
+
+#showSql
+logging:
+  level:
+    scau:
+      lizl:
+        forever: debug
+#          mapper: debug
+#  file:
+#    path: D:\logs
+#  level:
+#    root: debug
