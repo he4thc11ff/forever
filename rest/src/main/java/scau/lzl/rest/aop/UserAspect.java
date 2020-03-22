@@ -14,7 +14,7 @@ public class UserAspect {
     /**
      * 定义切入点，切入点为scau.lizl.forever.controller.UserController中的所有函数
      */
-    @Pointcut("execution(public * scau.lizl.forever.controller.UserController.*(..))")
+    @Pointcut("execution(public * scau.lzl.rest.controller.UserController.*(..))")
     public void definePoint() {}
 
 //    /**
