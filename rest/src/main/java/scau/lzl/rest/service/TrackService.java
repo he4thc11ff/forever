@@ -6,7 +6,7 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import scau.lizl.forever.entity.Tracker;
+import scau.lzl.rest.entity.Tracker;
 
 @Service
 public class TrackService {

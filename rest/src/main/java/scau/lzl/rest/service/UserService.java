@@ -2,8 +2,8 @@ package scau.lzl.rest.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import scau.lizl.forever.entity.User;
-import scau.lizl.forever.mapper.UserMapper;
+import scau.lzl.rest.entity.User;
+import scau.lzl.rest.mapper.UserMapper;
 
 import java.util.List;
 

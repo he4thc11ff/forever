@@ -5,9 +5,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
-import scau.lizl.forever.constant.ResponseResult;
-import scau.lizl.forever.entity.User;
-import scau.lizl.forever.service.UserService;
+import scau.lzl.rest.constant.ResponseResult;
+import scau.lzl.rest.entity.User;
+import scau.lzl.rest.service.UserService;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;

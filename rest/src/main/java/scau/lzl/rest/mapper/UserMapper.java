@@ -2,7 +2,7 @@ package scau.lzl.rest.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
-import scau.lizl.forever.entity.User;
+import scau.lzl.rest.entity.User;
 
 import java.util.List;
 
