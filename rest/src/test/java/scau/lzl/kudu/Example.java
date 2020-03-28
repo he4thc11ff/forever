@@ -30,6 +30,7 @@ public class Example {
         hashKeys.add("key");
         int numBuckets = 8;
         cto.addHashPartitions(hashKeys, numBuckets);
+        cto.setNumReplicas(1);
 
         // Create the table.
         client.createTable(tableName, schema, cto);
