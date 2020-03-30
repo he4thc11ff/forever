@@ -68,8 +68,8 @@ object Kafka2Kudu {
     }
 
     override def invoke(value: ObjectNode, context: SinkFunction.Context[_]): Unit = {
-      val insert = table.newInsert()
-      val row = insert.getRow
+      val upsert = table.newUpsert()
+      val row = upsert.getRow
 
       row.addLong("id", value.get("value").get("id").asLong())
       row.addLong("uid", value.get("value").get("uid").asLong())
@@ -77,7 +77,7 @@ object Kafka2Kudu {
       row.addString("referer", value.get("value").get("referer").asText())
       row.addInt("position", value.get("value").get("position").asInt())
 
-      session.apply(insert)
+      session.apply(upsert)
 
       insertedCount = insertedCount + 1
       if (insertedCount >= batchCount) {
