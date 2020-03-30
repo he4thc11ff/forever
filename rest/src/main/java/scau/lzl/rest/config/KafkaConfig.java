@@ -12,7 +12,7 @@ public class KafkaConfig {
     @Bean("kafkaTemplate")
     public KafkaProducer<String, String> getKafkaProducer() {
         Properties props = new Properties();
-        props.put("bootstrap.servers", "ali2c8g:9092");
+        props.put("bootstrap.servers", "ali1c2g:9092");
         props.put("acks", "all");
         props.put("retries", "5");
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
